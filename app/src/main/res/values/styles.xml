@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <item name="colorPrimaryDark">#302E2F</item>
+        <item name="android:background">#302E2F</item>
+    </style>
+
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/custom_tab_indicator</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hurly</string>
+    <string name="title_section1">Nuevo</string>
+    <string name="title_section2">Popular</string>
+    <string name="title_section3">Mis Posts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
