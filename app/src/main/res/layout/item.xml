@@ -2,37 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp">
 
     <TextView android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="19dp"
-        android:textColor="#FFF"/>
+        android:textSize="22.5dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFF"
+        android:paddingTop="17dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp">
 
         <TextView
             android:id="@+id/post_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="9dp"
-            android:textColor="#584"/>
+            android:textSize="13.5dp"
+            android:textColor="#bfd22b"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/post_creationDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="9dp"
+            android:textSize="13.5dp"
             android:layout_alignParentRight="true"
-            android:textColor="#584"/>
+            android:fontFamily="sans-serif-light"
+            android:textColor="#bfd22b"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7.5dp">
 
         <com.example.angel.viewpager2.AspectRatioImageView
             android:id="@+id/post_image"
@@ -41,7 +50,15 @@
             android:layout_height= "wrap_content"
             android:layout_gravity="center"/>
 
-        <LinearLayout
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:src="@drawable/gradient"
+                android:scaleX="1800.0"
+                android:layout_alignBottom="@+id/post_image"
+                android:alpha="0.65"/>
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -53,9 +70,9 @@
                 android:text="celda puntos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="7dp"
-                android:paddingLeft="7dp"
-                android:textSize="9dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dp"
+                android:textSize="8dp"
                 android:textColor="#FFF"/>
 
             <TextView
@@ -63,24 +80,31 @@
                 android:text="celda comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="7dp"
-                android:paddingLeft="4dp"
-                android:textSize="9dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="5dp"
+                android:textSize="8dp"
                 android:textColor="#FFF"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="0dp"
-                android:layout_gravity="bottom">
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/post_upvote"
-                    android:src="@drawable/arrowupb"
+                    android:src="@drawable/arrowup_2b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="120dp"/>
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10.5dp"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:background="#b6b6b6"/>
 
                 <ImageView
                     android:id="@+id/post_downvote"
@@ -88,15 +112,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="70dp"/>
+                    android:paddingRight="15dp"
+                    android:paddingBottom="12dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:background="#b6b6b6"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/answer_ico"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="10dp"/>
-            </RelativeLayout>
+                    android:paddingRight="18dp"
+                    android:paddingBottom="9dp"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 
@@ -106,44 +139,62 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.example.angel.viewpager2.AspectRatioImageView
             android:id="@+id/comment_user"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:scaleType="fitXY"
-            android:paddingTop="5dp"/>
+            android:scaleType="centerCrop"
+            android:layout_width= "72dp"
+            android:layout_height= "54dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginRight="13.5dp"/>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/comment_user"-->
+            <!--android:layout_width="72dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_marginTop="7.5dp"-->
+            <!--android:layout_marginRight="13.5dp"/>-->
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="13.5dp">
 
             <TextView
                 android:id="@+id/comment_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9dp"
-                android:textColor="#584"/>
+                android:textSize="13.5dp"
+                android:textColor="#bfd22b"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/comment_creationDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9dp"
+                android:textSize="12dp"
                 android:layout_alignParentRight="true"
-                android:textColor="#584"/>
+                android:textColor="#bfd22b"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/comment_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="9dp"
-                android:layout_alignParentBottom="true"
-                android:paddingBottom="3dp"
-                android:textColor="#FFF"/>
-
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-light"/>
         </RelativeLayout>
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="9dp"
+        android:background="#464646"/>
 
 </LinearLayout>

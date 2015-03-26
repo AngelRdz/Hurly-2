@@ -9,6 +9,9 @@ public class Post {
     private String creationDate;
     private Long points;
     private Long quanComments;
+    private String vote;
+
+
 
     private String imageUrl;
     private int imageWidth;
@@ -80,4 +83,8 @@ public class Post {
     public void setImageHeight(int imageHeight) {
         this.imageHeight = imageHeight;
     }
+
+    public String getVote() { return vote;}
+
+    public void setVote(String vote) {this.vote = vote;}
 }

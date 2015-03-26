@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/relativeActionBar"
+    android:id="@+id/PostingActionBar"
     android:background="#302E2F">
 
     <ImageView
@@ -10,11 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
         android:src="@drawable/logo"/>
 
     <FrameLayout
         android:id="@+id/menu_frame"
-        android:layout_width="40dp"
+        android:layout_width="30dp"
         android:layout_height="40dp"
         android:layout_centerInParent="true"
         android:layout_alignParentLeft="true"
@@ -25,9 +27,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/menu_ico"
+            android:src="@drawable/back_ico"
             android:layout_centerInParent="true"/>
     </FrameLayout>
 
-
+    <FrameLayout
+        android:id="@+id/done_frame"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="DONE"
+            android:textColor="#bfd22b"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="18dp" />
+    </FrameLayout>
 </RelativeLayout>

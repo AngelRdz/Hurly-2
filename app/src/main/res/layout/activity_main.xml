@@ -3,7 +3,14 @@
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative"
     tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
@@ -14,23 +21,88 @@
     <com.viewpagerindicator.TabPageIndicator
         android:id="@+id/indicator"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#302E2F"/>
+        android:layout_height="45dp"
+        android:background="#302E2F"
+        android:layout_below="@+id/action_bar"/>
 
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B6B6B6"
+        android:layout_below="@+id/action_bar"/>
+    <TextView
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#464646"
+        android:layout_below="@+id/line_1"/>
+
+    <View
+        android:id="@+id/floating_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:alpha="0.0"
+        android:visibility="invisible"
+        />
+
+    <com.getbase.floatingactionbutton.CustomFam
+        android:id="@+id/multiple_actions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_marginBottom="24dp"
-        android:layout_marginRight="24dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_add_white_24dp"
-        fab:fab_colorNormal="#ffff0000"
-        fab:fab_colorPressed="#ffb60000"
-        fab:fab_colorRipple="#ffb60000"/>
+        fab:fab_addButtonColorNormal="#BFD22B"
+        fab:fab_addButtonColorPressed="#ff7e9024"
+        fab:fab_labelStyle="@style/menu_labels_style">
 
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/meme_ico"
+            fab:fab_shadow="true"
+            fab:fab_colorNormal="#2196f3"
+            fab:fab_title="Action A"
+            fab:fab_colorPressed="#ff215db0"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/pencil_ico"
+            fab:fab_shadow="true"
+            fab:fab_colorNormal="#ff3d00"
+            fab:fab_title="Action B"
+            fab:fab_colorPressed="#ffaf3500"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/cam_ico"
+            fab:fab_shadow="true"
+            fab:fab_colorNormal="#ec008c"
+            fab:fab_title="Action C"
+            fab:fab_colorPressed="#ffad0058"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/gallery_ico"
+            fab:fab_shadow="true"
+            fab:fab_colorNormal="#ffd700"
+            fab:fab_title="Action D"
+            fab:fab_colorPressed="#ffc39b00"/>
+
+    </com.getbase.floatingactionbutton.CustomFam>
 </RelativeLayout>
 
